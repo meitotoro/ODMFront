@@ -8,7 +8,6 @@
 #include <QMessageBox>
 #include <QDialog>
 #include <QDateTime>
-#include <QNetworkAccessManager>
 #include <QUrlQuery>
 #include <QNetworkRequest>
 #include <QNetworkReply>
@@ -38,7 +37,6 @@ void MainWindow::on_inputButton_clicked()
     input_path=filePath;
     ui->inputFilePath->setText(filePath);
     QDir dir(filePath);
-    file_number=dir.count();
 
     QStringList filters;
     filters << "*.png" << "*.jpg" << "*.bmp";
@@ -48,25 +46,24 @@ void MainWindow::on_inputButton_clicked()
     for(int i=0;i<absoluteList.size();i++){
         fileList.append(absoluteList.at(i).filePath());
     }
+}
 
-
-
+void MainWindow::waitForAllReplies(QNetworkReply* reply) {
+    QByteArray rep=reply->readAll();
+    map[QString::fromUtf8(rep)]=true;
+    //num.release();
+    ++files_sent;
+    if (files_sent == fileList.size()) {
+        transferFinished();
+    }
 }
 
 void MainWindow::httpRequest(QString batchName, QStringList fileList, int step){
-    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-    int file_count=0;
-    int map_count=fileList.size();
-    QSemaphore num_map(0);
-    QObject::connect(manager, QNetworkAccessManager::finished,
-                     [&](QNetworkReply* reply){
-        QByteArray rep=reply->readAll();
-        map[QString::fromUtf8(rep)]=true;
-        num.release();
-        num_map.release();
-        file_count++;
-    });
+    manager = new QNetworkAccessManager(this);
+    connect(manager, QNetworkAccessManager::finished, this, MainWindow::waitForAllReplies);
 
+    map.clear();
+    files_sent=0;
     for(int i=0;i<fileList.size();i++){
         auto file_fullpath = fileList[i];
         QFileInfo info = QFileInfo(file_fullpath);
@@ -84,7 +81,7 @@ void MainWindow::httpRequest(QString batchName, QStringList fileList, int step){
         QByteArray ba = file.readAll();
         file.close();
 
-        num.acquire();
+        //num.acquire();
         auto reply = manager->post(request, ba);
         connect(reply, static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), [](QNetworkReply::NetworkError code) {
             qDebug() << "error: " << code;
@@ -98,24 +95,30 @@ void MainWindow::httpRequest(QString batchName, QStringList fileList, int step){
 //                file_count++;
 //            }
 //        });
-        ReplyTimeout *pTimeout = new ReplyTimeout(reply, 60000);
+        //ReplyTimeout *pTimeout = new ReplyTimeout(reply, 60000);
         // 超时进一步处理
+        /*
         connect(pTimeout, &ReplyTimeout::timeout, [=]() {
             qDebug() << "Timeout";
             reply->abort();
         });
+        */
     }
-    num_map.acquire(map_count);
+}
 
-//    if(file_count==map.size())
-//    {
-//        num_map.release();
-//        QMessageBox::information(this,"提示","传输完成",QMessageBox::Ok);
-
-//    }
-
-
-
+void MainWindow::transferFinished()
+{
+    QMessageBox::information(this,"提示","传输完成",QMessageBox::Ok);
+    QUrlQuery params;
+    params.addQueryItem("addr", batchName);
+    QUrl url("http://192.168.188.10:9000/docker?"+params.query());
+    QNetworkRequest request(url);
+    auto reply=manager->get(request);
+    connect(manager, QNetworkAccessManager::finished,
+            [=](){
+        auto code = reply->readAll();
+        QMessageBox::information(this,"提示",QString(code),QMessageBox::Ok);
+    });
 }
 
 
@@ -124,10 +127,16 @@ void MainWindow::on_startButton_clicked()
     QString address=ui->lineEdit->text();
     QDateTime current_date_time =QDateTime::currentDateTime();
     QString current_date =current_date_time.toString("yyyy.MM.dd");
-    QString batchName=address+"-"+current_date;
+    batchName=address+"-"+current_date;
     ui->progressBar->setMinimum(0);
-    ui->progressBar->setMaximum(file_number);
+    ui->progressBar->setMaximum(fileList.size());
     ui->progressBar->setValue(0);
     const int step=0;
     httpRequest(batchName,fileList,step);
+}
+
+void MainWindow::on_back_clicked()
+{
+
+
 }

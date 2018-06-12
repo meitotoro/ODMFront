@@ -5,6 +5,9 @@
 #include <QString>
 #include <QSemaphore>
 #include <QMap>
+#include <QNetworkAccessManager>
+
+class QNetworkReply;
 
 namespace Ui {
 class MainWindow;
@@ -27,13 +30,21 @@ private slots:
     
     void on_startButton_clicked();
 
+    void on_back_clicked();
+    void waitForAllReplies(QNetworkReply* reply);
+
+private:
+    void httpRequest(QString batchName, QStringList fileList, int step);
+    void transferFinished();
+
 private:
     Ui::MainWindow *ui;
-    int file_number=0;
-    void httpRequest(QString batchName, QStringList fileList, int step);
+    int files_sent = 0;
     QStringList fileList;
     QSemaphore num;
     QMap<QString, bool> map;
+    QNetworkAccessManager *manager;
+    QString batchName;
 };
 
 #endif // MAINWINDOW_H
