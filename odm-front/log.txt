@@ -1,0 +1,1111 @@
+[94m[INFO]    Initializing OpenDroneMap app - Fri Jun 08 06:36:47  2018[0m
+
+[94m[INFO]    Running ODM Load Dataset Cell[0m
+
+[92m[DEBUG]   Loading dataset from: /code/images[0m
+
+[92m[DEBUG]   /code/images[0m
+
+[92m[DEBUG]   Loaded IMG_9354.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1712233333 | lon: -98.0899916667 | alt: 317.3[0m
+
+[92m[DEBUG]   Loaded IMG_9360.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1709266667 | lon: -98.0894933333 | alt: 327.1[0m
+
+[92m[DEBUG]   Loaded IMG_9367.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1709366667 | lon: -98.0891933333 | alt: 342.6[0m
+
+[92m[DEBUG]   Loaded IMG_9359.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.17097 | lon: -98.0895716667 | alt: 325.3[0m
+
+[92m[DEBUG]   Loaded IMG_9357.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1710666667 | lon: -98.0897233333 | alt: 321.6[0m
+
+[92m[DEBUG]   Loaded IMG_9356.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.171115 | lon: -98.0898033333 | alt: 320.1[0m
+
+[92m[DEBUG]   Loaded IMG_9358.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.17102 | lon: -98.0896483333 | alt: 323.4[0m
+
+[92m[DEBUG]   Loaded IMG_9365.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1708083333 | lon: -98.089195 | alt: 338.4[0m
+
+[92m[DEBUG]   Loaded IMG_9355.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.17115 | lon: -98.0898683333 | alt: 318.9[0m
+
+[92m[DEBUG]   Loaded IMG_9363.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1708066667 | lon: -98.089255 | alt: 333.4[0m
+
+[92m[DEBUG]   Loaded IMG_9361.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1708566667 | lon: -98.08936 | alt: 330.3[0m
+
+[92m[DEBUG]   Loaded IMG_9366.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1708333333 | lon: -98.0891933333 | alt: 339.4[0m
+
+[92m[DEBUG]   Loaded IMG_9364.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.170795 | lon: -98.0892133333 | alt: 336.3[0m
+
+[92m[DEBUG]   Loaded IMG_9362.jpg | camera: canon powershot sx260 hs | dimensions: 4000 x 3000 | focal: 4.5 | ccd: 6.16 | lat: 30.1708166667 | lon: -98.0892783333 | alt: 332.5[0m
+
+[94m[INFO]    Found 14 usable images[0m
+
+[92m[DEBUG]   Line: WGS84 UTM 14N[0m
+
+[94m[INFO]    Running ODM Load Dataset Cell - Finished[0m
+
+[94m[INFO]    Running ODM OpenSfM Cell[0m
+
+[92m[DEBUG]   Altitude data detected, enabling it for GPS alignment[0m
+
+[92m[DEBUG]   ['use_exif_size: no', 'feature_process_size: 2048', 'feature_min_frames: 8000', 'processes: 1', 'matching_gps_neighbors: 8', 'depthmap_method: PATCH_MATCH', 'depthmap_resolution: 640', 'depthmap_min_patch_sd: 1', 'depthmap_min_consistent_views: 3', 'optimize_camera_parameters: yes', 'use_altitude_tag: True', 'align_method: naive'][0m
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm extract_metadata /code/opensfm[0m
+
+2018-06-08 06:36:59,198 INFO: Extracting focal lengths for image IMG_9354.jpg
+
+2018-06-08 06:36:59,932 INFO: Extracting focal lengths for image IMG_9360.jpg
+
+2018-06-08 06:37:00,835 INFO: Extracting focal lengths for image IMG_9367.jpg
+
+2018-06-08 06:37:01,640 INFO: Extracting focal lengths for image IMG_9359.jpg
+
+2018-06-08 06:37:02,267 INFO: Extracting focal lengths for image IMG_9357.jpg
+
+2018-06-08 06:37:02,917 INFO: Extracting focal lengths for image IMG_9356.jpg
+
+2018-06-08 06:37:03,579 INFO: Extracting focal lengths for image IMG_9358.jpg
+
+2018-06-08 06:37:04,226 INFO: Extracting focal lengths for image IMG_9365.jpg
+
+2018-06-08 06:37:04,858 INFO: Extracting focal lengths for image IMG_9355.jpg
+
+2018-06-08 06:37:05,508 INFO: Extracting focal lengths for image IMG_9363.jpg
+
+2018-06-08 06:37:06,127 INFO: Extracting focal lengths for image IMG_9361.jpg
+
+2018-06-08 06:37:06,807 INFO: Extracting focal lengths for image IMG_9366.jpg
+
+2018-06-08 06:37:07,463 INFO: Extracting focal lengths for image IMG_9364.jpg
+
+2018-06-08 06:37:08,079 INFO: Extracting focal lengths for image IMG_9362.jpg
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm detect_features /code/opensfm[0m
+
+2018-06-08 06:37:10,383 INFO: Extracting ROOT_HAHOG features for image IMG_9354.jpg
+
+2018-06-08 06:37:30,647 DEBUG: Found 9923 points in 18.8764209747s
+
+2018-06-08 06:37:33,947 INFO: Extracting ROOT_HAHOG features for image IMG_9360.jpg
+
+2018-06-08 06:37:48,598 DEBUG: Found 9644 points in 13.3037309647s
+
+2018-06-08 06:37:51,852 INFO: Extracting ROOT_HAHOG features for image IMG_9367.jpg
+
+2018-06-08 06:38:06,442 DEBUG: Found 9676 points in 13.1290659904s
+
+2018-06-08 06:38:09,481 INFO: Extracting ROOT_HAHOG features for image IMG_9359.jpg
+
+2018-06-08 06:38:23,475 DEBUG: Found 9625 points in 12.6917099953s
+
+2018-06-08 06:38:26,515 INFO: Extracting ROOT_HAHOG features for image IMG_9357.jpg
+
+2018-06-08 06:38:40,688 DEBUG: Found 9811 points in 12.8773579597s
+
+2018-06-08 06:38:43,928 INFO: Extracting ROOT_HAHOG features for image IMG_9356.jpg
+
+2018-06-08 06:39:05,144 DEBUG: Found 9815 points in 18.632352829s
+
+2018-06-08 06:39:09,305 INFO: Extracting ROOT_HAHOG features for image IMG_9358.jpg
+
+2018-06-08 06:39:28,883 DEBUG: Found 9678 points in 17.4066431522s
+
+2018-06-08 06:39:32,619 INFO: Extracting ROOT_HAHOG features for image IMG_9365.jpg
+
+2018-06-08 06:39:49,883 DEBUG: Found 9724 points in 15.7279589176s
+
+2018-06-08 06:39:55,209 INFO: Extracting ROOT_HAHOG features for image IMG_9355.jpg
+
+2018-06-08 06:40:12,363 DEBUG: Found 9844 points in 15.5611519814s
+
+2018-06-08 06:40:15,935 INFO: Extracting ROOT_HAHOG features for image IMG_9363.jpg
+
+2018-06-08 06:40:32,576 DEBUG: Found 9693 points in 15.1086249352s
+
+2018-06-08 06:40:36,412 INFO: Extracting ROOT_HAHOG features for image IMG_9361.jpg
+
+2018-06-08 06:40:54,302 DEBUG: Found 9682 points in 16.1911919117s
+
+2018-06-08 06:40:58,284 INFO: Extracting ROOT_HAHOG features for image IMG_9366.jpg
+
+2018-06-08 06:41:17,000 DEBUG: Found 9681 points in 16.969753027s
+
+2018-06-08 06:41:20,453 INFO: Extracting ROOT_HAHOG features for image IMG_9364.jpg
+
+2018-06-08 06:41:36,521 DEBUG: Found 9703 points in 14.48204422s
+
+2018-06-08 06:41:40,127 INFO: Extracting ROOT_HAHOG features for image IMG_9362.jpg
+
+2018-06-08 06:41:56,540 DEBUG: Found 9761 points in 14.8847279549s
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm match_features /code/opensfm[0m
+
+2018-06-08 06:42:03,036 INFO: Matching 66 image pairs
+
+2018-06-08 06:42:03,043 INFO: Matching IMG_9360.jpg  -  1 / 14
+
+2018-06-08 06:42:13,290 DEBUG: IMG_9360.jpg - IMG_9362.jpg has 3258 candidate matches
+
+2018-06-08 06:42:13,299 DEBUG: Robust matching time : 0.000646829605103s
+
+2018-06-08 06:42:13,306 DEBUG: Full matching 3245 / 3258, time: 10.2594029903s
+
+2018-06-08 06:42:24,847 DEBUG: IMG_9360.jpg - IMG_9363.jpg has 2960 candidate matches
+
+2018-06-08 06:42:24,851 DEBUG: Robust matching time : 0.000626087188721s
+
+2018-06-08 06:42:24,857 DEBUG: Full matching 2941 / 2960, time: 11.548584938s
+
+2018-06-08 06:42:36,030 DEBUG: IMG_9360.jpg - IMG_9365.jpg has 3089 candidate matches
+
+2018-06-08 06:42:36,045 DEBUG: Robust matching time : 0.000578880310059s
+
+2018-06-08 06:42:36,049 DEBUG: Full matching 3073 / 3089, time: 11.1860501766s
+
+2018-06-08 06:42:48,208 DEBUG: IMG_9360.jpg - IMG_9366.jpg has 3168 candidate matches
+
+2018-06-08 06:42:48,220 DEBUG: Robust matching time : 0.00107598304749s
+
+2018-06-08 06:42:48,227 DEBUG: Full matching 3154 / 3168, time: 12.1690149307s
+
+2018-06-08 06:42:58,800 DEBUG: IMG_9360.jpg - IMG_9361.jpg has 4305 candidate matches
+
+2018-06-08 06:42:58,803 DEBUG: Robust matching time : 0.000599145889282s
+
+2018-06-08 06:42:58,807 DEBUG: Full matching 4291 / 4305, time: 10.5796527863s
+
+2018-06-08 06:43:09,004 DEBUG: IMG_9360.jpg - IMG_9367.jpg has 2934 candidate matches
+
+2018-06-08 06:43:09,006 DEBUG: Robust matching time : 0.000715017318726s
+
+2018-06-08 06:43:09,010 DEBUG: Full matching 2901 / 2934, time: 10.1998991966s
+
+2018-06-08 06:43:19,671 DEBUG: IMG_9360.jpg - IMG_9364.jpg has 2615 candidate matches
+
+2018-06-08 06:43:19,677 DEBUG: Robust matching time : 0.000770092010498s
+
+2018-06-08 06:43:19,680 DEBUG: Full matching 2600 / 2615, time: 10.6660549641s
+
+2018-06-08 06:43:21,785 INFO: Matching IMG_9362.jpg  -  2 / 14
+
+2018-06-08 06:43:33,492 DEBUG: IMG_9362.jpg - IMG_9363.jpg has 4960 candidate matches
+
+2018-06-08 06:43:33,504 DEBUG: Robust matching time : 0.00210905075073s
+
+2018-06-08 06:43:33,526 DEBUG: Full matching 4954 / 4960, time: 11.7348680496s
+
+2018-06-08 06:43:43,310 DEBUG: IMG_9362.jpg - IMG_9366.jpg has 4850 candidate matches
+
+2018-06-08 06:43:43,325 DEBUG: Robust matching time : 0.00062108039856s
+
+2018-06-08 06:43:43,329 DEBUG: Full matching 4831 / 4850, time: 9.80290007591s
+
+2018-06-08 06:43:52,510 DEBUG: IMG_9362.jpg - IMG_9367.jpg has 3898 candidate matches
+
+2018-06-08 06:43:52,521 DEBUG: Robust matching time : 0.000545024871826s
+
+2018-06-08 06:43:52,525 DEBUG: Full matching 3886 / 3898, time: 9.19266009331s
+
+2018-06-08 06:44:03,675 DEBUG: IMG_9362.jpg - IMG_9364.jpg has 5045 candidate matches
+
+2018-06-08 06:44:03,680 DEBUG: Robust matching time : 0.000977993011475s
+
+2018-06-08 06:44:03,695 DEBUG: Full matching 4992 / 5045, time: 11.168389082s
+
+2018-06-08 06:44:13,101 DEBUG: IMG_9362.jpg - IMG_9365.jpg has 5276 candidate matches
+
+2018-06-08 06:44:13,111 DEBUG: Robust matching time : 0.000658988952637s
+
+2018-06-08 06:44:13,119 DEBUG: Full matching 5252 / 5276, time: 9.41564083099s
+
+2018-06-08 06:44:14,937 INFO: Matching IMG_9355.jpg  -  3 / 14
+
+2018-06-08 06:44:23,351 DEBUG: IMG_9355.jpg - IMG_9360.jpg has 7 candidate matches
+
+2018-06-08 06:44:31,835 DEBUG: IMG_9355.jpg - IMG_9357.jpg has 1916 candidate matches
+
+2018-06-08 06:44:31,838 DEBUG: Robust matching time : 0.000458955764771s
+
+2018-06-08 06:44:31,842 DEBUG: Full matching 1909 / 1916, time: 8.48866891861s
+
+2018-06-08 06:44:40,458 DEBUG: IMG_9355.jpg - IMG_9362.jpg has 12 candidate matches
+
+2018-06-08 06:44:48,911 DEBUG: IMG_9355.jpg - IMG_9359.jpg has 206 candidate matches
+
+2018-06-08 06:44:48,915 DEBUG: Robust matching time : 0.000308990478516s
+
+2018-06-08 06:44:48,917 DEBUG: Full matching 193 / 206, time: 8.44163298607s
+
+2018-06-08 06:44:57,658 DEBUG: IMG_9355.jpg - IMG_9361.jpg has 8 candidate matches
+
+2018-06-08 06:45:07,238 DEBUG: IMG_9355.jpg - IMG_9356.jpg has 4165 candidate matches
+
+2018-06-08 06:45:07,255 DEBUG: Robust matching time : 0.0045108795166s
+
+2018-06-08 06:45:07,257 DEBUG: Full matching 4160 / 4165, time: 9.59010100365s
+
+2018-06-08 06:45:15,664 DEBUG: IMG_9355.jpg - IMG_9358.jpg has 747 candidate matches
+
+2018-06-08 06:45:15,671 DEBUG: Robust matching time : 0.000298023223877s
+
+2018-06-08 06:45:15,675 DEBUG: Full matching 738 / 747, time: 8.41387295723s
+
+2018-06-08 06:45:16,236 INFO: Matching IMG_9357.jpg  -  4 / 14
+
+2018-06-08 06:45:24,793 DEBUG: IMG_9357.jpg - IMG_9358.jpg has 4601 candidate matches
+
+2018-06-08 06:45:24,799 DEBUG: Robust matching time : 0.000627994537354s
+
+2018-06-08 06:45:24,801 DEBUG: Full matching 4590 / 4601, time: 8.56068587303s
+
+2018-06-08 06:45:33,326 DEBUG: IMG_9357.jpg - IMG_9359.jpg has 2763 candidate matches
+
+2018-06-08 06:45:33,347 DEBUG: Robust matching time : 0.000520944595337s
+
+2018-06-08 06:45:33,351 DEBUG: Full matching 2739 / 2763, time: 8.5443148613s
+
+2018-06-08 06:45:41,963 DEBUG: IMG_9357.jpg - IMG_9361.jpg has 320 candidate matches
+
+2018-06-08 06:45:41,973 DEBUG: Robust matching time : 0.000240087509155s
+
+2018-06-08 06:45:41,982 DEBUG: Full matching 310 / 320, time: 8.6295068264s
+
+2018-06-08 06:45:50,483 DEBUG: IMG_9357.jpg - IMG_9360.jpg has 1172 candidate matches
+
+2018-06-08 06:45:50,486 DEBUG: Robust matching time : 0.000525951385498s
+
+2018-06-08 06:45:50,490 DEBUG: Full matching 1150 / 1172, time: 8.50592207909s
+
+2018-06-08 06:45:59,101 DEBUG: IMG_9357.jpg - IMG_9362.jpg has 248 candidate matches
+
+2018-06-08 06:45:59,111 DEBUG: Robust matching time : 0.000247955322266s
+
+2018-06-08 06:45:59,113 DEBUG: Full matching 236 / 248, time: 8.62067699432s
+
+2018-06-08 06:45:59,840 INFO: Matching IMG_9365.jpg  -  5 / 14
+
+2018-06-08 06:46:09,154 DEBUG: IMG_9365.jpg - IMG_9367.jpg has 3921 candidate matches
+
+2018-06-08 06:46:09,167 DEBUG: Robust matching time : 0.000578880310059s
+
+2018-06-08 06:46:09,172 DEBUG: Full matching 3906 / 3921, time: 9.32583999634s
+
+2018-06-08 06:46:17,767 DEBUG: IMG_9365.jpg - IMG_9366.jpg has 5156 candidate matches
+
+2018-06-08 06:46:17,770 DEBUG: Robust matching time : 0.000602006912231s
+
+2018-06-08 06:46:17,779 DEBUG: Full matching 5149 / 5156, time: 8.60449004173s
+
+2018-06-08 06:46:18,468 INFO: Matching IMG_9364.jpg  -  6 / 14
+
+2018-06-08 06:46:27,149 DEBUG: IMG_9364.jpg - IMG_9366.jpg has 3722 candidate matches
+
+2018-06-08 06:46:27,164 DEBUG: Robust matching time : 0.000528812408447s
+
+2018-06-08 06:46:27,166 DEBUG: Full matching 3719 / 3722, time: 8.69490599632s
+
+2018-06-08 06:46:35,772 DEBUG: IMG_9364.jpg - IMG_9367.jpg has 2730 candidate matches
+
+2018-06-08 06:46:35,774 DEBUG: Robust matching time : 0.000446796417236s
+
+2018-06-08 06:46:35,780 DEBUG: Full matching 2726 / 2730, time: 8.61060881615s
+
+2018-06-08 06:46:44,437 DEBUG: IMG_9364.jpg - IMG_9365.jpg has 5912 candidate matches
+
+2018-06-08 06:46:44,452 DEBUG: Robust matching time : 0.00305986404419s
+
+2018-06-08 06:46:44,454 DEBUG: Full matching 5885 / 5912, time: 8.67151093483s
+
+2018-06-08 06:46:45,403 INFO: Matching IMG_9358.jpg  -  7 / 14
+
+2018-06-08 06:46:53,903 DEBUG: IMG_9358.jpg - IMG_9360.jpg has 2458 candidate matches
+
+2018-06-08 06:46:53,911 DEBUG: Robust matching time : 0.000428915023804s
+
+2018-06-08 06:46:53,913 DEBUG: Full matching 2437 / 2458, time: 8.50491690636s
+
+2018-06-08 06:47:02,928 DEBUG: IMG_9358.jpg - IMG_9361.jpg has 1027 candidate matches
+
+2018-06-08 06:47:02,939 DEBUG: Robust matching time : 0.000300168991089s
+
+2018-06-08 06:47:02,947 DEBUG: Full matching 1010 / 1027, time: 9.02857398987s
+
+2018-06-08 06:47:11,571 DEBUG: IMG_9358.jpg - IMG_9362.jpg has 739 candidate matches
+
+2018-06-08 06:47:11,583 DEBUG: Robust matching time : 0.000285863876343s
+
+2018-06-08 06:47:11,589 DEBUG: Full matching 725 / 739, time: 8.639950037s
+
+2018-06-08 06:47:20,037 DEBUG: IMG_9358.jpg - IMG_9359.jpg has 4661 candidate matches
+
+2018-06-08 06:47:20,046 DEBUG: Robust matching time : 0.000725030899048s
+
+2018-06-08 06:47:20,052 DEBUG: Full matching 4638 / 4661, time: 8.46141695976s
+
+2018-06-08 06:47:20,747 INFO: Matching IMG_9367.jpg  -  8 / 14
+
+2018-06-08 06:47:20,749 INFO: Matching IMG_9361.jpg  -  9 / 14
+
+2018-06-08 06:47:29,552 DEBUG: IMG_9361.jpg - IMG_9366.jpg has 3778 candidate matches
+
+2018-06-08 06:47:29,567 DEBUG: Robust matching time : 0.00685787200928s
+
+2018-06-08 06:47:29,571 DEBUG: Full matching 3766 / 3778, time: 8.81992721558s
+
+2018-06-08 06:47:38,697 DEBUG: IMG_9361.jpg - IMG_9365.jpg has 4158 candidate matches
+
+2018-06-08 06:47:38,713 DEBUG: Robust matching time : 0.000579833984375s
+
+2018-06-08 06:47:38,717 DEBUG: Full matching 4129 / 4158, time: 9.14615106583s
+
+2018-06-08 06:47:48,444 DEBUG: IMG_9361.jpg - IMG_9364.jpg has 4199 candidate matches
+
+2018-06-08 06:47:48,456 DEBUG: Robust matching time : 0.00131487846375s
+
+2018-06-08 06:47:48,467 DEBUG: Full matching 4165 / 4199, time: 9.74344086647s
+
+2018-06-08 06:48:00,909 DEBUG: IMG_9361.jpg - IMG_9367.jpg has 3125 candidate matches
+
+2018-06-08 06:48:00,912 DEBUG: Robust matching time : 0.000553846359253s
+
+2018-06-08 06:48:00,918 DEBUG: Full matching 3111 / 3125, time: 12.4483919144s
+
+2018-06-08 06:48:13,069 DEBUG: IMG_9361.jpg - IMG_9363.jpg has 4206 candidate matches
+
+2018-06-08 06:48:13,075 DEBUG: Robust matching time : 0.000521898269653s
+
+2018-06-08 06:48:13,078 DEBUG: Full matching 4199 / 4206, time: 12.1304299831s
+
+2018-06-08 06:48:23,385 DEBUG: IMG_9361.jpg - IMG_9362.jpg has 4766 candidate matches
+
+2018-06-08 06:48:23,401 DEBUG: Robust matching time : 0.000692844390869s
+
+2018-06-08 06:48:23,403 DEBUG: Full matching 4755 / 4766, time: 10.3182070255s
+
+2018-06-08 06:48:25,438 INFO: Matching IMG_9363.jpg  -  10 / 14
+
+2018-06-08 06:48:37,118 DEBUG: IMG_9363.jpg - IMG_9365.jpg has 6092 candidate matches
+
+2018-06-08 06:48:37,134 DEBUG: Robust matching time : 0.000993013381958s
+
+2018-06-08 06:48:37,140 DEBUG: Full matching 6050 / 6092, time: 11.6995849609s
+
+2018-06-08 06:48:48,256 DEBUG: IMG_9363.jpg - IMG_9367.jpg has 2951 candidate matches
+
+2018-06-08 06:48:48,260 DEBUG: Robust matching time : 0.000723123550415s
+
+2018-06-08 06:48:48,283 DEBUG: Full matching 2945 / 2951, time: 11.1397140026s
+
+2018-06-08 06:48:58,678 DEBUG: IMG_9363.jpg - IMG_9366.jpg has 3999 candidate matches
+
+2018-06-08 06:48:58,691 DEBUG: Robust matching time : 0.000566005706787s
+
+2018-06-08 06:48:58,699 DEBUG: Full matching 3993 / 3999, time: 10.4074039459s
+
+2018-06-08 06:49:09,543 DEBUG: IMG_9363.jpg - IMG_9364.jpg has 6480 candidate matches
+
+2018-06-08 06:49:09,552 DEBUG: Robust matching time : 0.000705003738403s
+
+2018-06-08 06:49:09,554 DEBUG: Full matching 6447 / 6480, time: 10.851129055s
+
+2018-06-08 06:49:11,205 INFO: Matching IMG_9354.jpg  -  11 / 14
+
+2018-06-08 06:49:22,514 DEBUG: IMG_9354.jpg - IMG_9358.jpg has 14 candidate matches
+
+2018-06-08 06:49:33,098 DEBUG: IMG_9354.jpg - IMG_9359.jpg has 7 candidate matches
+
+2018-06-08 06:49:43,586 DEBUG: IMG_9354.jpg - IMG_9355.jpg has 4221 candidate matches
+
+2018-06-08 06:49:43,598 DEBUG: Robust matching time : 0.000694036483765s
+
+2018-06-08 06:49:43,608 DEBUG: Full matching 4207 / 4221, time: 10.4939098358s
+
+2018-06-08 06:49:55,251 DEBUG: IMG_9354.jpg - IMG_9356.jpg has 1940 candidate matches
+
+2018-06-08 06:49:55,268 DEBUG: Robust matching time : 0.00505495071411s
+
+2018-06-08 06:49:55,270 DEBUG: Full matching 1932 / 1940, time: 11.6611289978s
+
+2018-06-08 06:50:06,248 DEBUG: IMG_9354.jpg - IMG_9362.jpg has 6 candidate matches
+
+2018-06-08 06:50:16,726 DEBUG: IMG_9354.jpg - IMG_9357.jpg has 607 candidate matches
+
+2018-06-08 06:50:16,735 DEBUG: Robust matching time : 0.000302076339722s
+
+2018-06-08 06:50:16,737 DEBUG: Full matching 604 / 607, time: 10.4820530415s
+
+2018-06-08 06:50:27,156 DEBUG: IMG_9354.jpg - IMG_9361.jpg has 13 candidate matches
+
+2018-06-08 06:50:37,277 DEBUG: IMG_9354.jpg - IMG_9360.jpg has 12 candidate matches
+
+2018-06-08 06:50:37,841 INFO: Matching IMG_9359.jpg  -  12 / 14
+
+2018-06-08 06:50:49,453 DEBUG: IMG_9359.jpg - IMG_9364.jpg has 1242 candidate matches
+
+2018-06-08 06:50:49,463 DEBUG: Robust matching time : 0.000380039215088s
+
+2018-06-08 06:50:49,470 DEBUG: Full matching 1209 / 1242, time: 11.6192150116s
+
+2018-06-08 06:51:01,103 DEBUG: IMG_9359.jpg - IMG_9365.jpg has 1566 candidate matches
+
+2018-06-08 06:51:01,108 DEBUG: Robust matching time : 0.000446081161499s
+
+2018-06-08 06:51:01,122 DEBUG: Full matching 1545 / 1566, time: 11.6522190571s
+
+2018-06-08 06:51:12,137 DEBUG: IMG_9359.jpg - IMG_9362.jpg has 1652 candidate matches
+
+2018-06-08 06:51:12,148 DEBUG: Robust matching time : 0.000375986099243s
+
+2018-06-08 06:51:12,152 DEBUG: Full matching 1639 / 1652, time: 11.0275020599s
+
+2018-06-08 06:51:24,574 DEBUG: IMG_9359.jpg - IMG_9363.jpg has 1441 candidate matches
+
+2018-06-08 06:51:24,583 DEBUG: Robust matching time : 0.000407934188843s
+
+2018-06-08 06:51:24,585 DEBUG: Full matching 1431 / 1441, time: 12.4328129292s
+
+2018-06-08 06:51:36,002 DEBUG: IMG_9359.jpg - IMG_9367.jpg has 1960 candidate matches
+
+2018-06-08 06:51:36,012 DEBUG: Robust matching time : 0.000475168228149s
+
+2018-06-08 06:51:36,016 DEBUG: Full matching 1907 / 1960, time: 11.4238700867s
+
+2018-06-08 06:51:45,553 DEBUG: IMG_9359.jpg - IMG_9361.jpg has 2128 candidate matches
+
+2018-06-08 06:51:45,568 DEBUG: Robust matching time : 0.000503063201904s
+
+2018-06-08 06:51:45,570 DEBUG: Full matching 2100 / 2128, time: 9.54654788971s
+
+2018-06-08 06:51:55,089 DEBUG: IMG_9359.jpg - IMG_9360.jpg has 4261 candidate matches
+
+2018-06-08 06:51:55,092 DEBUG: Robust matching time : 0.00064492225647s
+
+2018-06-08 06:51:55,102 DEBUG: Full matching 4184 / 4261, time: 9.5282599926s
+
+2018-06-08 06:52:07,630 DEBUG: IMG_9359.jpg - IMG_9366.jpg has 1947 candidate matches
+
+2018-06-08 06:52:07,649 DEBUG: Robust matching time : 0.000458955764771s
+
+2018-06-08 06:52:07,651 DEBUG: Full matching 1916 / 1947, time: 12.5446600914s
+
+2018-06-08 06:52:08,984 INFO: Matching IMG_9356.jpg  -  13 / 14
+
+2018-06-08 06:52:19,447 DEBUG: IMG_9356.jpg - IMG_9360.jpg has 339 candidate matches
+
+2018-06-08 06:52:19,459 DEBUG: Robust matching time : 0.000272035598755s
+
+2018-06-08 06:52:19,463 DEBUG: Full matching 326 / 339, time: 10.4770729542s
+
+2018-06-08 06:52:30,786 DEBUG: IMG_9356.jpg - IMG_9361.jpg has 64 candidate matches
+
+2018-06-08 06:52:30,803 DEBUG: Robust matching time : 0.000372886657715s
+2018-06-08 06:52:30,803 DEBUG: Full matching 56 / 64, time: 11.3392338753s
+
+2018-06-08 06:52:43,776 DEBUG: IMG_9356.jpg - IMG_9357.jpg has 4293 candidate matches
+
+2018-06-08 06:52:43,781 DEBUG: Robust matching time : 0.000595092773438s
+
+2018-06-08 06:52:43,787 DEBUG: Full matching 4286 / 4293, time: 12.9838597775s
+
+2018-06-08 06:52:55,197 DEBUG: IMG_9356.jpg - IMG_9362.jpg has 67 candidate matches
+
+2018-06-08 06:52:55,214 DEBUG: Robust matching time : 0.000148057937622s
+
+2018-06-08 06:52:55,216 DEBUG: Full matching 59 / 67, time: 11.4244909286s
+
+2018-06-08 06:53:07,169 DEBUG: IMG_9356.jpg - IMG_9358.jpg has 2489 candidate matches
+
+2018-06-08 06:53:07,175 DEBUG: Robust matching time : 0.00037693977356s
+
+2018-06-08 06:53:07,177 DEBUG: Full matching 2465 / 2489, time: 11.9567139149s
+
+2018-06-08 06:53:16,555 DEBUG: IMG_9356.jpg - IMG_9359.jpg has 1344 candidate matches
+
+2018-06-08 06:53:16,558 DEBUG: Robust matching time : 0.000362873077393s
+
+2018-06-08 06:53:16,560 DEBUG: Full matching 1326 / 1344, time: 9.37512421608s
+
+2018-06-08 06:53:17,226 INFO: Matching IMG_9366.jpg  -  14 / 14
+
+2018-06-08 06:53:27,586 DEBUG: IMG_9366.jpg - IMG_9367.jpg has 5881 candidate matches
+
+2018-06-08 06:53:27,601 DEBUG: Robust matching time : 0.000763177871704s
+
+2018-06-08 06:53:27,605 DEBUG: Full matching 5869 / 5881, time: 10.3701770306s
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm create_tracks /code/opensfm[0m
+
+2018-06-08 06:53:29,983 INFO: reading features
+
+2018-06-08 06:53:32,909 DEBUG: Merging features onto tracks
+
+2018-06-08 06:53:37,822 DEBUG: Good tracks: 28514
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm reconstruct /code/opensfm[0m
+
+2018-06-08 06:53:48,797 INFO: Starting incremental reconstruction
+
+2018-06-08 06:53:56,526 INFO: Starting reconstruction with IMG_9357.jpg and IMG_9358.jpg
+
+2018-06-08 06:53:57,622 INFO: Two-view reconstruction inliers: 4659 / 4659
+
+2018-06-08 06:53:58,718 INFO: Triangulated: 4659
+
+2018-06-08 06:53:58,888 DEBUG: Ceres Solver Report: Iterations: 1, Initial cost: 2.367395e+02, Final cost: 2.365588e+02, Termination: CONVERGENCE
+
+2018-06-08 06:54:00,638 DEBUG: Ceres Solver Report: Iterations: 1, Initial cost: 2.365990e+02, Final cost: 2.365236e+02, Termination: CONVERGENCE
+
+2018-06-08 06:54:07,191 DEBUG: Ceres Solver Report: Iterations: 50, Initial cost: 4.719991e+02, Final cost: 4.675865e+02, Termination: NO_CONVERGENCE
+
+2018-06-08 06:54:07,198 INFO: Removed outliers: 0
+
+2018-06-08 06:54:07,247 INFO: -------------------------------------------------------
+
+2018-06-08 06:54:07,432 INFO: IMG_9359.jpg resection inliers: 2637 / 2644
+
+2018-06-08 06:54:07,616 DEBUG: Ceres Solver Report: Iterations: 4, Initial cost: 2.652060e+02, Final cost: 2.534957e+02, Termination: CONVERGENCE
+
+2018-06-08 06:54:07,619 INFO: Adding IMG_9359.jpg to the reconstruction
+
+2018-06-08 06:54:08,264 INFO: Re-triangulating
+
+2018-06-08 06:54:19,777 DEBUG: Ceres Solver Report: Iterations: 50, Initial cost: 7.286201e+02, Final cost: 7.129592e+02, Termination: NO_CONVERGENCE
+
+2018-06-08 06:54:23,186 DEBUG: Ceres Solver Report: Iterations: 2, Initial cost: 7.134217e+02, Final cost: 7.129549e+02, Termination: CONVERGENCE
+
+2018-06-08 06:54:23,210 INFO: Removed outliers: 0
+
+2018-06-08 06:54:23,438 INFO: -------------------------------------------------------
+
+2018-06-08 06:54:23,633 INFO: IMG_9356.jpg resection inliers: 2471 / 2526
+
+2018-06-08 06:54:23,807 DEBUG: Ceres Solver Report: Iterations: 4, Initial cost: 1.659910e+02, Final cost: 3.066453e+01, Termination: CONVERGENCE
+
+2018-06-08 06:54:23,811 INFO: Adding IMG_9356.jpg to the reconstruction
+
+2018-06-08 06:54:24,460 INFO: Re-triangulating
+
+2018-06-08 06:54:28,594 DEBUG: Ceres Solver Report: Iterations: 10, Initial cost: 5.512577e+01, Final cost: 3.206723e+01, Termination: CONVERGENCE
+
+2018-06-08 06:54:33,555 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 3.293949e+01, Final cost: 3.206726e+01, Termination: CONVERGENCE
+
+2018-06-08 06:54:33,566 INFO: Removed outliers: 0
+
+2018-06-08 06:54:33,820 INFO: -------------------------------------------------------
+
+2018-06-08 06:54:34,029 INFO: IMG_9360.jpg resection inliers: 2504 / 2511
+
+2018-06-08 06:54:34,246 DEBUG: Ceres Solver Report: Iterations: 5, Initial cost: 1.277962e+02, Final cost: 2.049919e+01, Termination: CONVERGENCE
+
+2018-06-08 06:54:34,252 INFO: Adding IMG_9360.jpg to the reconstruction
+
+2018-06-08 06:54:34,885 INFO: Re-triangulating
+
+2018-06-08 06:54:39,950 DEBUG: Ceres Solver Report: Iterations: 9, Initial cost: 5.771689e+01, Final cost: 4.717889e+01, Termination: CONVERGENCE
+
+2018-06-08 06:54:46,469 DEBUG: Ceres Solver Report: Iterations: 4, Initial cost: 4.855561e+01, Final cost: 4.717890e+01, Termination: CONVERGENCE
+
+2018-06-08 06:54:46,511 INFO: Removed outliers: 0
+
+2018-06-08 06:54:46,812 INFO: -------------------------------------------------------
+
+2018-06-08 06:54:46,991 INFO: IMG_9361.jpg resection inliers: 2263 / 2294
+
+2018-06-08 06:54:47,171 DEBUG: Ceres Solver Report: Iterations: 4, Initial cost: 1.699260e+02, Final cost: 3.447791e+01, Termination: CONVERGENCE
+
+2018-06-08 06:54:47,187 INFO: Adding IMG_9361.jpg to the reconstruction
+
+2018-06-08 06:54:47,952 INFO: Re-triangulating
+
+2018-06-08 06:55:00,900 DEBUG: Ceres Solver Report: Iterations: 21, Initial cost: 9.164280e+01, Final cost: 6.775070e+01, Termination: CONVERGENCE
+
+2018-06-08 06:55:08,546 DEBUG: Ceres Solver Report: Iterations: 4, Initial cost: 6.964175e+01, Final cost: 6.775070e+01, Termination: CONVERGENCE
+
+2018-06-08 06:55:08,595 INFO: Removed outliers: 0
+
+2018-06-08 06:55:08,903 INFO: -------------------------------------------------------
+
+2018-06-08 06:55:09,149 INFO: IMG_9362.jpg resection inliers: 3252 / 3394
+
+2018-06-08 06:55:09,489 DEBUG: Ceres Solver Report: Iterations: 4, Initial cost: 2.005505e+02, Final cost: 7.301350e+01, Termination: CONVERGENCE
+
+2018-06-08 06:55:09,493 INFO: Adding IMG_9362.jpg to the reconstruction
+
+2018-06-08 06:55:10,634 DEBUG: Local bundle sets: interior 7  boundary 0  other 0
+
+2018-06-08 06:55:15,133 DEBUG: Ceres Solver Report: Iterations: 10, Initial cost: 1.697046e+02, Final cost: 1.229433e+02, Termination: NO_CONVERGENCE
+
+2018-06-08 06:55:15,165 INFO: Removed outliers: 1
+
+2018-06-08 06:55:15,239 INFO: -------------------------------------------------------
+
+2018-06-08 06:55:15,541 INFO: IMG_9365.jpg resection inliers: 3696 / 4412
+
+2018-06-08 06:55:15,780 DEBUG: Ceres Solver Report: Iterations: 4, Initial cost: 6.734224e+02, Final cost: 6.188342e+01, Termination: CONVERGENCE
+
+2018-06-08 06:55:15,784 INFO: Adding IMG_9365.jpg to the reconstruction
+
+2018-06-08 06:55:16,428 INFO: Re-triangulating
+
+2018-06-08 06:55:35,236 DEBUG: Ceres Solver Report: Iterations: 29, Initial cost: 2.034340e+02, Final cost: 1.626150e+02, Termination: CONVERGENCE
+
+2018-06-08 06:55:42,718 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 1.662085e+02, Final cost: 1.626151e+02, Termination: CONVERGENCE
+
+2018-06-08 06:55:42,758 INFO: Removed outliers: 3
+
+2018-06-08 06:55:43,063 INFO: -------------------------------------------------------
+
+2018-06-08 06:55:43,351 INFO: IMG_9363.jpg resection inliers: 5594 / 5599
+
+2018-06-08 06:55:43,608 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 2.586777e+02, Final cost: 5.293215e+01, Termination: CONVERGENCE
+
+2018-06-08 06:55:43,610 INFO: Adding IMG_9363.jpg to the reconstruction
+
+2018-06-08 06:55:44,446 DEBUG: Local bundle sets: interior 9  boundary 0  other 0
+
+2018-06-08 06:55:51,051 DEBUG: Ceres Solver Report: Iterations: 10, Initial cost: 2.198162e+02, Final cost: 1.922008e+02, Termination: NO_CONVERGENCE
+
+2018-06-08 06:55:51,092 INFO: Removed outliers: 1
+
+2018-06-08 06:55:51,120 INFO: -------------------------------------------------------
+
+2018-06-08 06:55:51,535 INFO: IMG_9364.jpg resection inliers: 6627 / 6633
+
+2018-06-08 06:55:51,839 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 8.530431e+01, Final cost: 3.444865e+01, Termination: CONVERGENCE
+
+2018-06-08 06:55:51,848 INFO: Adding IMG_9364.jpg to the reconstruction
+
+2018-06-08 06:55:52,388 DEBUG: Local bundle sets: interior 10  boundary 0  other 0
+
+2018-06-08 06:56:00,438 DEBUG: Ceres Solver Report: Iterations: 10, Initial cost: 2.269473e+02, Final cost: 2.132668e+02, Termination: NO_CONVERGENCE
+
+2018-06-08 06:56:00,540 INFO: Removed outliers: 0
+
+2018-06-08 06:56:00,573 INFO: -------------------------------------------------------
+
+2018-06-08 06:56:01,153 INFO: IMG_9366.jpg resection inliers: 6037 / 6154
+
+2018-06-08 06:56:01,418 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 3.584574e+02, Final cost: 1.088217e+02, Termination: CONVERGENCE
+
+2018-06-08 06:56:01,425 INFO: Adding IMG_9366.jpg to the reconstruction
+
+2018-06-08 06:56:01,725 INFO: Re-triangulating
+
+2018-06-08 06:56:17,888 DEBUG: Ceres Solver Report: Iterations: 16, Initial cost: 3.253188e+02, Final cost: 2.703903e+02, Termination: CONVERGENCE
+
+2018-06-08 06:56:28,124 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 2.754909e+02, Final cost: 2.703906e+02, Termination: CONVERGENCE
+
+2018-06-08 06:56:28,162 INFO: Removed outliers: 0
+
+2018-06-08 06:56:28,553 INFO: -------------------------------------------------------
+
+2018-06-08 06:56:28,858 INFO: IMG_9367.jpg resection inliers: 5866 / 5902
+
+2018-06-08 06:56:29,108 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 2.008548e+02, Final cost: 1.341442e+02, Termination: CONVERGENCE
+
+2018-06-08 06:56:29,115 INFO: Adding IMG_9367.jpg to the reconstruction
+
+2018-06-08 06:56:29,679 DEBUG: Local bundle sets: interior 12  boundary 0  other 0
+
+2018-06-08 06:56:38,940 DEBUG: Ceres Solver Report: Iterations: 9, Initial cost: 4.074202e+02, Final cost: 3.581019e+02, Termination: CONVERGENCE
+
+2018-06-08 06:56:38,982 INFO: Removed outliers: 2
+
+2018-06-08 06:56:38,998 INFO: -------------------------------------------------------
+
+2018-06-08 06:56:39,116 INFO: IMG_9355.jpg resection inliers: 1954 / 1988
+
+2018-06-08 06:56:39,236 DEBUG: Ceres Solver Report: Iterations: 5, Initial cost: 1.879041e+02, Final cost: 2.948973e+01, Termination: CONVERGENCE
+
+2018-06-08 06:56:39,245 INFO: Adding IMG_9355.jpg to the reconstruction
+
+2018-06-08 06:56:40,111 DEBUG: Local bundle sets: interior 13  boundary 0  other 0
+
+2018-06-08 06:56:50,785 DEBUG: Ceres Solver Report: Iterations: 10, Initial cost: 3.551532e+02, Final cost: 3.330549e+02, Termination: NO_CONVERGENCE
+
+2018-06-08 06:56:50,856 INFO: Removed outliers: 0
+
+2018-06-08 06:56:50,859 INFO: -------------------------------------------------------
+
+2018-06-08 06:56:50,982 INFO: IMG_9354.jpg resection inliers: 1908 / 1975
+
+2018-06-08 06:56:51,100 DEBUG: Ceres Solver Report: Iterations: 5, Initial cost: 1.879390e+02, Final cost: 2.495802e+01, Termination: CONVERGENCE
+
+2018-06-08 06:56:51,108 INFO: Adding IMG_9354.jpg to the reconstruction
+
+2018-06-08 06:56:51,572 INFO: Re-triangulating
+
+2018-06-08 06:57:46,631 DEBUG: Ceres Solver Report: Iterations: 50, Initial cost: 3.593203e+02, Final cost: 3.415339e+02, Termination: NO_CONVERGENCE
+
+2018-06-08 06:57:55,426 DEBUG: Ceres Solver Report: Iterations: 3, Initial cost: 3.481736e+02, Final cost: 3.415337e+02, Termination: CONVERGENCE
+
+2018-06-08 06:57:55,465 INFO: Removed outliers: 0
+
+2018-06-08 06:57:55,775 INFO: -------------------------------------------------------
+
+2018-06-08 06:57:58,299 DEBUG: Ceres Solver Report: Iterations: 0, Initial cost: 3.414858e+02, Final cost: 3.414858e+02, Termination: CONVERGENCE
+
+2018-06-08 06:57:58,347 INFO: Removed outliers: 0
+
+2018-06-08 06:58:02,035 INFO: Reconstruction 0: 14 images, 28502 points
+
+2018-06-08 06:58:02,045 INFO: 1 partial reconstructions in total.
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm export_visualsfm /code/opensfm[0m
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm undistort /code/opensfm[0m
+
+2018-06-08 06:58:08,521 DEBUG: Undistorting the reconstruction
+
+2018-06-08 06:58:11,192 DEBUG: Undistorting image IMG_9360.jpg
+
+2018-06-08 06:58:12,825 DEBUG: Undistorting image IMG_9362.jpg
+
+2018-06-08 06:58:14,303 DEBUG: Undistorting image IMG_9355.jpg
+
+2018-06-08 06:58:15,839 DEBUG: Undistorting image IMG_9357.jpg
+
+2018-06-08 06:58:17,313 DEBUG: Undistorting image IMG_9359.jpg
+
+2018-06-08 06:58:18,840 DEBUG: Undistorting image IMG_9365.jpg
+
+2018-06-08 06:58:20,313 DEBUG: Undistorting image IMG_9367.jpg
+
+2018-06-08 06:58:21,884 DEBUG: Undistorting image IMG_9361.jpg
+
+2018-06-08 06:58:23,435 DEBUG: Undistorting image IMG_9363.jpg
+
+2018-06-08 06:58:24,944 DEBUG: Undistorting image IMG_9358.jpg
+
+2018-06-08 06:58:26,400 DEBUG: Undistorting image IMG_9354.jpg
+
+2018-06-08 06:58:27,910 DEBUG: Undistorting image IMG_9364.jpg
+
+2018-06-08 06:58:29,359 DEBUG: Undistorting image IMG_9356.jpg
+
+2018-06-08 06:58:30,867 DEBUG: Undistorting image IMG_9366.jpg
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm compute_depthmaps /code/opensfm[0m
+
+2018-06-08 06:58:36,446 INFO: Computing neighbors
+
+2018-06-08 06:58:42,810 INFO: Computing depthmap for image IMG_9360.jpg with PATCH_MATCH
+
+2018-06-08 06:59:23,600 INFO: Computing depthmap for image IMG_9362.jpg with PATCH_MATCH
+
+2018-06-08 07:00:08,228 INFO: Computing depthmap for image IMG_9355.jpg with PATCH_MATCH
+
+2018-06-08 07:00:48,036 INFO: Computing depthmap for image IMG_9357.jpg with PATCH_MATCH
+
+2018-06-08 07:01:29,635 INFO: Computing depthmap for image IMG_9359.jpg with PATCH_MATCH
+
+2018-06-08 07:02:11,491 INFO: Computing depthmap for image IMG_9365.jpg with PATCH_MATCH
+
+2018-06-08 07:02:57,836 INFO: Computing depthmap for image IMG_9367.jpg with PATCH_MATCH
+
+2018-06-08 07:03:42,193 INFO: Computing depthmap for image IMG_9361.jpg with PATCH_MATCH
+
+2018-06-08 07:04:24,917 INFO: Computing depthmap for image IMG_9363.jpg with PATCH_MATCH
+
+2018-06-08 07:05:10,975 INFO: Computing depthmap for image IMG_9358.jpg with PATCH_MATCH
+
+2018-06-08 07:05:52,136 INFO: Computing depthmap for image IMG_9354.jpg with PATCH_MATCH
+
+2018-06-08 07:06:35,978 INFO: Computing depthmap for image IMG_9364.jpg with PATCH_MATCH
+
+2018-06-08 07:07:20,717 INFO: Computing depthmap for image IMG_9356.jpg with PATCH_MATCH
+
+2018-06-08 07:07:42,554 INFO: Computing depthmap for image IMG_9366.jpg with PATCH_MATCH
+
+2018-06-08 07:08:04,003 INFO: Cleaning depthmap for image IMG_9360.jpg
+
+2018-06-08 07:08:05,076 INFO: Cleaning depthmap for image IMG_9362.jpg
+
+2018-06-08 07:08:06,053 INFO: Cleaning depthmap for image IMG_9355.jpg
+
+2018-06-08 07:08:06,653 INFO: Cleaning depthmap for image IMG_9357.jpg
+
+2018-06-08 07:08:07,378 INFO: Cleaning depthmap for image IMG_9359.jpg
+
+2018-06-08 07:08:08,443 INFO: Cleaning depthmap for image IMG_9365.jpg
+
+2018-06-08 07:08:09,382 INFO: Cleaning depthmap for image IMG_9367.jpg
+
+2018-06-08 07:08:10,375 INFO: Cleaning depthmap for image IMG_9361.jpg
+
+2018-06-08 07:08:11,355 INFO: Cleaning depthmap for image IMG_9363.jpg
+
+2018-06-08 07:08:12,237 INFO: Cleaning depthmap for image IMG_9358.jpg
+
+2018-06-08 07:08:13,131 INFO: Cleaning depthmap for image IMG_9354.jpg
+
+2018-06-08 07:08:13,649 INFO: Cleaning depthmap for image IMG_9364.jpg
+
+2018-06-08 07:08:14,517 INFO: Cleaning depthmap for image IMG_9356.jpg
+
+2018-06-08 07:08:15,198 INFO: Cleaning depthmap for image IMG_9366.jpg
+
+2018-06-08 07:08:16,143 INFO: Pruning depthmap for image IMG_9360.jpg
+
+2018-06-08 07:08:19,622 INFO: Pruning depthmap for image IMG_9362.jpg
+
+2018-06-08 07:08:22,731 INFO: Pruning depthmap for image IMG_9355.jpg
+
+2018-06-08 07:08:24,141 INFO: Pruning depthmap for image IMG_9357.jpg
+
+2018-06-08 07:08:26,176 INFO: Pruning depthmap for image IMG_9359.jpg
+
+2018-06-08 07:08:29,699 INFO: Pruning depthmap for image IMG_9365.jpg
+
+2018-06-08 07:08:32,659 INFO: Pruning depthmap for image IMG_9367.jpg
+
+2018-06-08 07:08:36,066 INFO: Pruning depthmap for image IMG_9361.jpg
+
+2018-06-08 07:08:39,408 INFO: Pruning depthmap for image IMG_9363.jpg
+
+2018-06-08 07:08:42,075 INFO: Pruning depthmap for image IMG_9358.jpg
+
+2018-06-08 07:08:44,821 INFO: Pruning depthmap for image IMG_9354.jpg
+
+2018-06-08 07:08:46,073 INFO: Pruning depthmap for image IMG_9364.jpg
+
+2018-06-08 07:08:48,753 INFO: Pruning depthmap for image IMG_9356.jpg
+
+2018-06-08 07:08:50,522 INFO: Pruning depthmap for image IMG_9366.jpg
+
+2018-06-08 07:08:53,649 INFO: Merging depthmaps
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/export_bundler /code/opensfm[0m
+
+[92m[DEBUG]   running PYTHONPATH=/code/SuperBuild/install/lib/python2.7/dist-packages /code/SuperBuild/src/opensfm/bin/opensfm export_geocoords /code/opensfm --transformation --proj '+units=m +no_defs=True +datum=WGS84 +proj=utm +zone=14 '[0m
+
+[94m[INFO]    Running ODM OpenSfM Cell - Finished[0m
+
+[94m[INFO]    Running ODM Meshing Cell[0m
+
+[92m[DEBUG]   Writing ODM Mesh file in: /code/odm_meshing/odm_mesh.ply[0m
+
+[92m[DEBUG]   running /code/build/bin/odm_meshing -inputFile /code/opensfm/depthmaps/merged.ply -outputFile /code/odm_meshing/odm_mesh.ply -logFile /code/odm_meshing/odm_meshing_log.txt -maxVertexCount 100000 -octreeDepth 9  -samplesPerNode 1.0 -solverDivide 9[0m
+
+[WARNING] Initial residual too low: 1.394e-08 < 0.000001
+
+[94m[INFO]    Running ODM Meshing Cell - Finished[0m
+
+[94m[INFO]    Running MVS Texturing Cell[0m
+
+[92m[DEBUG]   Writing MVS Textured file in: /code/odm_texturing/odm_textured_model.obj[0m
+
+[92m[DEBUG]   running /code/SuperBuild/install/bin/texrecon /code/opensfm/reconstruction.nvm /code/odm_meshing/odm_mesh.ply /code/odm_texturing/odm_textured_model -d gmi -o gauss_clamping -t none     [0m
+
+/code/SuperBuild/install/bin/texrecon (built on Jun  4 2018, 13:59:47)
+
+Load and prepare mesh: 
+
+PLY Loader: comment PCL generated
+Reading PLY: 100038 verts...
+ 199894 faces...
+ done.
+
+Generating texture views: 
+
+NVM: Loading file...
+
+NVM: Number of views: 14
+
+NVM: Number of features: 0
+
+                                                                                	Loading 100%... done. (Took 18.356s)
+
+Building adjacency graph: 
+
+                                                                                	Adding edges 100%... done. (Took 0.322s)
+
+	299750 total edges.
+
+View selection:
+
+	Building BVH from 199894 faces... 
+done. (Took: 425 ms)
+
+                                                                                	Calculating face qualities 100%... done. (Took 14.428s)
+
+                                                                                	Postprocessing face infos 100%... done. (Took 0.109s)
+
+	Maximum quality of a face within an image: 2439.5
+
+	Clamping qualities to 52.4546 within normalization.
+
+	Writing data cost file... 
+done.
+
+	Optimizing:
+		Time[s]	Energy
+
+		0	167934
+
+		1	166628
+
+		1	165259
+
+		2	164438
+
+		2	164066
+
+		3	163842
+
+		3	163740
+
+		4	163610
+
+		4	163551
+
+		5	163500
+
+		5	163450
+
+		6	163422
+
+		6	163397
+
+	8376 faces have not been seen
+
+	Took: 22.033s
+
+Generating texture patches:
+
+	Running... 
+done. (Took 6.505s)
+	403 texture patches.
+Running global seam leveling:
+
+	Create matrices for optimization... 
+ done.
+
+	Lhs dimensionality: 101853 x 101853
+
+	Calculating adjustments:
+
+		Color channel 0: CG took 76 iterations. Residual is 9.40844e-05
+
+		Color channel 1: CG took 76 iterations. Residual is 9.48845e-05
+
+		Color channel 2: CG took 81 iterations. Residual is 8.85871e-05
+
+		Took 0.431 seconds
+
+                                                                                	Adjusting texture patches 100%... done. (Took 5.151s)
+
+Running local seam leveling:
+
+                                                                                	Blending texture patches 100%... done. (Took 38.665s)
+
+Generating texture atlases:
+	Sorting texture patches... 
+done.
+
+	Working on atlas 3 100%... done.
+
+	Finalizing texture atlases... 
+done. (Took: 24.537s)
+
+Building objmodel:
+
+	Saving model... 
+done.
+
+Whole texturing procedure took: 134.414s
+
+[94m[INFO]    Running ODM Texturing Cell - Finished[0m
+
+[94m[INFO]    Running ODM Georeferencing Cell[0m
+
+[94m[INFO]    Running georeferencing with OpenSfM transformation matrix[0m
+
+[92m[DEBUG]   running /code/build/bin/odm_georef -bundleFile /code/opensfm/bundle_r000.out -inputTransformFile /code/opensfm/geocoords_transformation.txt -inputCoordFile /code/odm_georeferencing/coords.txt -inputFile /code/odm_texturing/odm_textured_model.obj -outputFile /code/odm_texturing/odm_textured_model_geo.obj -inputPointCloudFile /code/opensfm/depthmaps/merged.ply -outputPointCloudFile /code/odm_georeferencing/odm_georeferenced_model.ply  -logFile /code/odm_georeferencing/odm_georeferencing_log.txt -outputTransformFile /code/odm_georeferencing/odm_georeferencing_transform.txt -georefFileOutputPath /code/odm_georeferencing/odm_georeferencing_model_geo.txt[0m
+
+[92m[DEBUG]   running /code/SuperBuild/build/pdal/bin/pdal pipeline -i /code/odm_georeferencing/las.json --readers.ply.filename=/code/odm_georeferencing/odm_georeferenced_model.ply --writers.las.filename=/code/odm_georeferencing/odm_georeferenced_model.las[0m
+
+[94m[INFO]    Calculating cropping area and generating bounds shapefile from point cloud[0m
+
+[92m[DEBUG]   running pdal translate -i "/code/odm_georeferencing/odm_georeferenced_model.las" -o "/code/odm_georeferencing/odm_georeferenced_model.filtered.las" decimation outlier range --filters.decimation.step=40 --filters.outlier.method=radius --filters.outlier.radius=20 --filters.outlier.min_k=2 --filters.range.limits='Classification![7:7]'[0m
+
+(
+pdal translate filters.outlier
+ Warning) Filtered cloud has no outliers!
+
+[92m[DEBUG]   running pdal info --boundary --filters.hexbin.edge_length=1 --filters.hexbin.threshold=0 /code/odm_georeferencing/odm_georeferenced_model.filtered.las > /code/odm_georeferencing/odm_georeferenced_model.boundary.json[0m
+
+[92m[DEBUG]   running pdal info --summary /code/odm_georeferencing/odm_georeferenced_model.las > /code/odm_georeferencing/odm_georeferenced_model.summary.json[0m
+
+[92m[DEBUG]   running ogr2ogr -overwrite -a_srs "+proj=utm +zone=14 +datum=WGS84 +units=m +no_defs" /code/odm_georeferencing/odm_georeferenced_model.bounds.shp /code/odm_georeferencing/odm_georeferenced_model.bounds.geojson[0m
+
+[94m[INFO]    Running ODM Georeferencing Cell - Finished[0m
+
+[94m[INFO]    Running ODM DEM Cell[0m
+
+[94m[INFO]    Classify: False[0m
+
+[94m[INFO]    Create DSM: False[0m
+
+[94m[INFO]    Create DTM: False[0m
+
+[94m[INFO]    DEM input file /code/odm_georeferencing/odm_georeferenced_model.las found: True[0m
+
+[93m[WARNING] DEM will not be generated[0m
+
+[94m[INFO]    Running ODM DEM Cell - Finished[0m
+[94m[INFO]    Running ODM Orthophoto Cell[0m
+
+[92m[DEBUG]   running /code/build/bin/odm_orthophoto -inputFile /code/odm_texturing/odm_textured_model_geo.obj -logFile /code/odm_orthophoto/odm_orthophoto_log.txt -outputFile /code/odm_orthophoto/odm_orthophoto.png -resolution 20.0  -outputCornerFile /code/odm_orthophoto/odm_orthophoto_corners.txt[0m
+
+[94m[INFO]    Creating GeoTIFF[0m
+
+[92m[DEBUG]   running gdal_translate -a_ullr 587606.403574 3338154.80637 587735.191065 3338056.10121 -co TILED=yes  -co BIGTIFF=IF_SAFER -co COMPRESS=DEFLATE -co PREDICTOR=2  -co BLOCKXSIZE=512 -co BLOCKYSIZE=512 -co NUM_THREADS=ALL_CPUS -a_srs "+units=m +no_defs=True +datum=WGS84 +proj=utm +zone=14 " --config GDAL_CACHEMAX 26.6% /code/odm_orthophoto/odm_orthophoto.png /code/odm_orthophoto/odm_orthophoto.tif > /code/odm_orthophoto/gdal_translate_log.txt[0m
+
+[92m[DEBUG]   running gdalwarp -cutline /code/odm_georeferencing/odm_georeferenced_model.bounds.shp -crop_to_cutline -co NUM_THREADS=ALL_CPUS -co BIGTIFF=IF_SAFER -co BLOCKYSIZE=512 -co COMPRESS=DEFLATE -co BLOCKXSIZE=512 -co TILED=YES -co PREDICTOR=2 /code/odm_orthophoto/odm_orthophoto.original.tif /code/odm_orthophoto/odm_orthophoto.tif --config GDAL_CACHEMAX 26.6%[0m
+
+Creating output file that is 2301P x 1624L.
+Processing input file /code/odm_orthophoto/odm_orthophoto.original.tif.
+Using band 4 of source image as alpha.
+Using band 4 of destination image as alpha.
+0
+.
+.
+.
+10
+.
+.
+.
+20
+.
+.
+.
+30
+.
+.
+.
+40
+.
+.
+.
+50
+.
+.
+.
+60
+.
+.
+.
+70
+.
+..
+80
+.
+.
+.
+90
+.
+.
+.
+100 - done.
+
+[94m[INFO]    Running ODM OrthoPhoto Cell - Finished[0m
+
+[94m[INFO]    OpenDroneMap app finished - Fri Jun 08 07:12:35  2018[0m
+
