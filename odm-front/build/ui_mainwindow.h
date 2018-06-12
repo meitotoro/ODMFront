@@ -66,6 +66,7 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QPushButton *startButton;
     QSpacerItem *horizontalSpacer_3;
+    QPushButton *back;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -233,6 +234,11 @@ public:
 
         verticalLayout->addWidget(widget_4);
 
+        back = new QPushButton(centralWidget);
+        back->setObjectName(QStringLiteral("back"));
+
+        verticalLayout->addWidget(back);
+
         MainWindow->setCentralWidget(centralWidget);
         widget->raise();
         widget_2->raise();
@@ -240,7 +246,7 @@ public:
         widget_4->raise();
         widget_5->raise();
         widget_6->raise();
-        progressBar->raise();
+        back->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 554, 26));
@@ -267,6 +273,7 @@ public:
         label_2->setText(QApplication::translate("MainWindow", "\350\276\223\345\207\272\346\226\207\344\273\266\345\220\215\357\274\232", Q_NULLPTR));
         lineEdit->setText(QString());
         startButton->setText(QApplication::translate("MainWindow", "start", Q_NULLPTR));
+        back->setText(QApplication::translate("MainWindow", "back", Q_NULLPTR));
     } // retranslateUi
 
 };
