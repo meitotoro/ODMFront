@@ -311,13 +311,6 @@
       </layout>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="back">
-      <property name="text">
-       <string>back</string>
-      </property>
-     </widget>
-    </item>
    </layout>
    <zorder>widget</zorder>
    <zorder>widget_2</zorder>
@@ -325,7 +318,6 @@
    <zorder>widget_4</zorder>
    <zorder>widget_5</zorder>
    <zorder>widget_6</zorder>
-   <zorder>back</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

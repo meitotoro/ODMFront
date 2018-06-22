@@ -30,12 +30,13 @@ private slots:
     
     void on_startButton_clicked();
 
-    void on_back_clicked();
-    void waitForAllReplies(QNetworkReply* reply);
-
 private:
-    void httpRequest(QString batchName, QStringList fileList, int step);
+    void httpRequest(QString batchName, QStringList fileList);
     void transferFinished();
+    void get_progress();
+    void get_resultFiles();
+    void stopDocker();
+    void runDocker();
 
 private:
     Ui::MainWindow *ui;
@@ -45,6 +46,7 @@ private:
     QMap<QString, bool> map;
     QNetworkAccessManager *manager;
     QString batchName;
+    void httpConnectTest();
 };
 
 #endif // MAINWINDOW_H
