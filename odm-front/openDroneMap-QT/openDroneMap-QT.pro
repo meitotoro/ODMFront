@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     replytimeout.cpp \
-    sendfiles.cpp
+    sendfiles.cpp \
+    docker.cpp
 
 HEADERS += \
         mainwindow.h \
     replytimeout.h \
-    sendfiles.h
+    sendfiles.h \
+    docker.h
 
 FORMS += \
         mainwindow.ui

@@ -18,6 +18,7 @@
 #include <QTimer>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include "docker.h"
 
 
 
@@ -58,22 +59,6 @@ void MainWindow::on_inputButton_clicked()
     }
 }
 
-void MainWindow::runDocker()
-{
-    QUrlQuery params;
-    params.addQueryItem("folder", batchName);
-    QUrl url("http://192.168.188.10:9000/docker?"+params.query());
-    QNetworkRequest request(url);
-    auto reply=manager->get(request);
-    connect(reply,QNetworkReply::finished,
-            [=](){
-            reply->deleteLater();
-            QMessageBox::information(this,"提示","start run docker",QMessageBox::Ok);
-            get_progress();
-    });
-
-}
-
 void MainWindow::get_resultFiles(){
     QString path =input_path+"/1.zip";
     QDir dir(input_path);
@@ -107,112 +92,41 @@ void MainWindow::get_resultFiles(){
 
 }
 
-void MainWindow::get_progress(){
-    QTimer *timer = new QTimer(this);
-    connect(timer,QTimer::timeout,[=](){
-        QUrl url("http://192.168.188.10:9000/progress");
-        QNetworkRequest request(url);
-        auto reply=manager->get(request);
-        connect(reply,QNetworkReply::finished,[=](){
-//            auto code = reply->error();
-//            if(code != QNetworkReply::NoError) {
-//                qDebug()<< "error: " << code;
-//                qDebug()<<reply->errorString();
-//                qDebug()<<reply->attribute( QNetworkRequest::HttpStatusCodeAttribute).toInt();
-//                QByteArray ba=reply->readAll();
-//                QString s_data = QString::fromUtf8(ba.data());
-//                QJsonObject obj;
-//                QJsonDocument doc = QJsonDocument::fromJson(s_data.toUtf8());
-//                if(!doc.isNull()&&doc.isObject())
-//                {
-//                    obj = doc.object();
-//                    QString title=obj.value("title").toString();
-//                    QString description=obj.value("description").toString();
-//                    QMessageBox::information(this,title,description,QMessageBox::Ok);
-//                }
-//                reply->abort();
-//            }else{
-
-                QByteArray ba=reply->readAll();
-                QString s_data = QString::fromUtf8(ba.data());
-                s_data=s_data.replace("\u001B[94m","");
-                s_data=s_data.replace("\u001B[92m","");
-                s_data=s_data.replace("\u001B[0m","");
-                s_data=s_data.replace("\u001B[0;m","");
-                QStringList list_data=s_data.split(QRegExp("\n|\r\n|\r"),QString::SkipEmptyParts);
-                if(list_data.indexOf("[WARNING] Initial residual too low: 0 < 0.000001")>=0){
-                    QMessageBox::information(this,"提示","图片量太少，请重新选择图片",QMessageBox::Ok);
-                    reply->abort();
-                    timer->stop();
-                }else {
-                    if(s_data!=""){
-                    qDebug()<<s_data;
-                    QString temp = QString::fromUtf8("running PYTHONPATH");
-                    if(s_data.contains(temp)){
-                        int progress=ui->progressBar->value();
-                        qDebug()<<progress;
-                        progress+=10;
-                        ui->progressBar->setValue(progress);
-                        int after=ui->progressBar->value();
-                        qDebug()<<after;
-                    }
-                    if (list_data.indexOf("OpenDroneMap app finished")>=0){
-                        qDebug()<<"OpenDroneMap app finished";
-                        timer->stop();
-                        timer->deleteLater();
-                        reply->deleteLater();
-                        ui->progressBar->setValue(110);
-                        QMessageBox::information(this,"提示","finished",QMessageBox::Ok);
-                        //文件夹生成了，从后台传回
-                        get_resultFiles();
-                    }
-                }
-                }
-
-                reply->deleteLater();
-//            }
-
-        });
-        connect(reply,static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error),[](QNetworkReply::NetworkError code){
-            qDebug()<<"error:"<<code;
-
-        });
-    });
-    timer->start(2000); // 每隔2s
-}
-void MainWindow::stopDocker(){
-    QUrlQuery params;
-    params.addQueryItem("folder", batchName);
-    QUrl url("http://192.168.188.10:9000/stopdocker?"+params.query());
-    QNetworkRequest request(url);
-    auto reply=manager->get(request);
-    connect(reply,QNetworkReply::finished,[=](){
-        QByteArray ba=reply->readAll();
-        QString s_data = QString::fromUtf8(ba.data());
-        //QMessageBox::information(this,"提示",s_data,QMessageBox::Ok);
-        reply->deleteLater();
-
-    });
-}
 void MainWindow::httpConnectTest(){
     QUrl url("http://192.168.188.10:9000/httpTest");
     QNetworkRequest request(url);
     auto reply=manager->get(request);
+    auto docker = std::make_shared<Docker>(batchName,input_path,this->window());
     connect(reply,QNetworkReply::finished,[=](){
         QNetworkReply::NetworkError code=reply->error();
+//        QString errorString=reply->errorString();
+//        qDebug()<<errorString;
         if(code==QNetworkReply::ConnectionRefusedError){
             QMessageBox::information(this,"提示","服务器链接不成功，请检查服务器状态",QMessageBox::Ok);
             reply->abort();
         }else
         {
-            //如果之前有正在运行的docker，停掉，运行新的docker
-            stopDocker();
             SendFiles files(fileList, batchName);
             //向服务器发送传输文件
             files.send(manager);
             //运行docker请求
-            runDocker();
 
+            //如果之前有正在运行的docker，停掉，运行新的docker
+            docker->stop(manager);
+            docker->run(manager);
+            //docker开始运行了，发回信号，开始拿后台的progress
+            connect(docker.get(),Docker::dockerRun,[=](){
+                QTimer *timer = new QTimer(this);
+                connect(timer,QTimer::timeout,[=](){
+                    docker->get_progress(manager,0,110);
+                    int progress=docker->get_curProgress();
+                    ui->progressBar->setValue(progress);
+                });
+                timer->start(2000);
+            });
+            connect(docker.get(),Docker::resultReady,[=](){
+                get_resultFiles();
+            });
         }
         reply->deleteLater();
 
