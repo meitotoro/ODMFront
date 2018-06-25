@@ -19,6 +19,7 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include "docker.h"
+#include "ui_mainwindow.h"
 
 
 
@@ -29,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     manager=new QNetworkAccessManager(this);
+    timer = new QTimer(this);
 
 }
 
@@ -36,6 +38,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete manager;
+    delete timer;
 }
 
 void MainWindow::on_inputButton_clicked()
@@ -44,6 +47,7 @@ void MainWindow::on_inputButton_clicked()
                                                          QFileDialog::ShowDirsOnly
                                                          | QFileDialog::DontResolveSymlinks);
     input_path=filePath;
+
     ui->inputFilePath->setText(filePath);
     QDir dir(filePath);
 
@@ -106,17 +110,21 @@ void MainWindow::httpConnectTest(){
             reply->abort();
         }else
         {
+            //服务器连接成功，用户可以重新选择图片，拼接正射影像
+            QString newButtonText="重新选择图片";
+            ui->inputButton->setText(newButtonText);
             SendFiles files(fileList, batchName);
+            ui->progress_label->setText("开始传输图片..");
             //向服务器发送传输文件
             files.send(manager);
             //运行docker请求
-
             //如果之前有正在运行的docker，停掉，运行新的docker
             docker->stop(manager);
             docker->run(manager);
             //docker开始运行了，发回信号，开始拿后台的progress
             connect(docker.get(),Docker::dockerRun,[=](){
-                QTimer *timer = new QTimer(this);
+                ui->progress_label->setText("start run docker..");
+
                 connect(timer,QTimer::timeout,[=](){
                     docker->get_progress(manager,0,110);
                     int progress=docker->get_curProgress();
@@ -145,5 +153,18 @@ void MainWindow::on_startButton_clicked()
     httpConnectTest();
 
 
+
 }
+
+
+void MainWindow::on_stop_clicked()
+{
+    auto docker = std::make_shared<Docker>(batchName,input_path,this->window());
+    docker->stop(manager);
+    timer->stop();
+    ui->progressBar->setValue(0);
+    ui->progress_label->setText("后台停止运行");
+    //QMessageBox::information(this,"提示","后台停止运行",QMessageBox::Ok);
+}
+
 

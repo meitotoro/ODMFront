@@ -30,6 +30,8 @@ private slots:
     
     void on_startButton_clicked();
 
+    void on_stop_clicked();
+
 private:
     void httpRequest(QString batchName, QStringList fileList);
     void transferFinished();
@@ -47,6 +49,7 @@ private:
     QNetworkAccessManager *manager;
     QString batchName;
     void httpConnectTest();
+    QTimer *timer;
 };
 
 #endif // MAINWINDOW_H

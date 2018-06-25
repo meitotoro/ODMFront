@@ -28,15 +28,16 @@ SOURCES += \
         mainwindow.cpp \
     replytimeout.cpp \
     sendfiles.cpp \
-    docker.cpp
+    docker.cpp \
+    ui_mainwindow.cpp
 
 HEADERS += \
         mainwindow.h \
     replytimeout.h \
     sendfiles.h \
-    docker.h
+    docker.h \
+    ui_mainwindow.h
 
-FORMS += \
-        mainwindow.ui
+FORMS +=
 
 QT += network

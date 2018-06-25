@@ -22,7 +22,7 @@ void Docker::run(QNetworkAccessManager *netman)
     connect(reply,QNetworkReply::finished,
             [=](){
         reply->deleteLater();
-        QMessageBox::information(_parent,"提示","start run docker",QMessageBox::Ok);
+        //QMessageBox::information(_parent,"提示","start run docker",QMessageBox::Ok);
         emit dockerRun();
     });
 }
