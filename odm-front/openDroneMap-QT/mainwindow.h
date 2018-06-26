@@ -32,6 +32,8 @@ private slots:
 
     void on_stop_clicked();
 
+//slots:
+//    void getProgress();
 private:
     void httpRequest(QString batchName, QStringList fileList);
     void transferFinished();

@@ -14,11 +14,12 @@ public:
     void stop(QNetworkAccessManager *netman);
     int get_progress(QNetworkAccessManager *netman,int min_progress,int max_progress);
     void get_resulteFiles();
-    int get_curProgress();
+    int get_curProgress();//返回当前的进度值
 
 signals:
     void dockerRun();
     void resultReady();
+    void littleImage();
 
 private:
     QString _batchName;

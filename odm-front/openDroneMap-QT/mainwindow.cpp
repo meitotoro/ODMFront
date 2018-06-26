@@ -103,8 +103,8 @@ void MainWindow::httpConnectTest(){
     auto docker = std::make_shared<Docker>(batchName,input_path,this->window());
     connect(reply,QNetworkReply::finished,[=](){
         QNetworkReply::NetworkError code=reply->error();
-//        QString errorString=reply->errorString();
-//        qDebug()<<errorString;
+        //        QString errorString=reply->errorString();
+        //        qDebug()<<errorString;
         if(code==QNetworkReply::ConnectionRefusedError){
             QMessageBox::information(this,"提示","服务器链接不成功，请检查服务器状态",QMessageBox::Ok);
             reply->abort();
@@ -113,7 +113,7 @@ void MainWindow::httpConnectTest(){
             //服务器连接成功，用户可以重新选择图片，拼接正射影像
             QString newButtonText="重新选择图片";
             ui->inputButton->setText(newButtonText);
-            SendFiles files(fileList, batchName);
+            SendFiles files(manager,fileList, batchName);
             ui->progress_label->setText("开始传输图片..");
             //向服务器发送传输文件
             files.send(manager);
@@ -122,15 +122,19 @@ void MainWindow::httpConnectTest(){
             docker->stop(manager);
             docker->run(manager);
             //docker开始运行了，发回信号，开始拿后台的progress
+            //connect(timer,QTimer::timeout,this,this->getProgress());
+            connect(timer,QTimer::timeout,this,[=](){
+                docker->get_progress(manager,0,110);
+                int progress=docker->get_curProgress();
+                qDebug()<<progress;
+                ui->progressBar->setValue(progress);
+            });
             connect(docker.get(),Docker::dockerRun,[=](){
                 ui->progress_label->setText("start run docker..");
-
-                connect(timer,QTimer::timeout,[=](){
-                    docker->get_progress(manager,0,110);
-                    int progress=docker->get_curProgress();
-                    ui->progressBar->setValue(progress);
-                });
                 timer->start(2000);
+            });
+            connect(docker.get(),Docker::littleImage,[=](){
+               timer->disconnect();
             });
             connect(docker.get(),Docker::resultReady,[=](){
                 get_resultFiles();
@@ -152,16 +156,24 @@ void MainWindow::on_startButton_clicked()
     ui->progressBar->setValue(0);
     httpConnectTest();
 
-
-
 }
 
+//void MainWindow::getProgress()
+//{
+
+//    docker->get_progress(manager,0,110);
+//    int progress=docker->get_curProgress();
+//    qDebug()<<progress;
+//    ui->progressBar->setValue(progress);
+
+//}
 
 void MainWindow::on_stop_clicked()
 {
     auto docker = std::make_shared<Docker>(batchName,input_path,this->window());
     docker->stop(manager);
     timer->stop();
+    timer->disconnect();
     ui->progressBar->setValue(0);
     ui->progress_label->setText("后台停止运行");
     //QMessageBox::information(this,"提示","后台停止运行",QMessageBox::Ok);

@@ -40,8 +40,9 @@ void Docker::stop(QNetworkAccessManager *netman)
         reply->deleteLater();
 
     });
+   // emit dockerStopped();
 }
-
+//获取当前的log进度，修改_curProgress值
 int Docker::get_progress(QNetworkAccessManager *netman,int min_progress,int max_progress)
 {
     QUrl url("http://192.168.188.10:9000/progress");
@@ -58,6 +59,7 @@ int Docker::get_progress(QNetworkAccessManager *netman,int min_progress,int max_
         if(list_data.indexOf("[WARNING] Initial residual too low: 0 < 0.000001")>=0){
             QMessageBox::information(_parent,"提示","图片量太少，请重新选择图片",QMessageBox::Ok);
             reply->abort();
+            emit littleImage();
             _curProgress=0;
         }else {
             if(s_data!=""){
@@ -82,10 +84,16 @@ int Docker::get_progress(QNetworkAccessManager *netman,int min_progress,int max_
         qDebug()<<"error:"<<code;
 
     });
+//    connect(this,Docker::dockerStopped,[=](){
+//        reply->abort();
+//    });
 
 
 }
+
+//返回当前的进度值
 int Docker::get_curProgress(){
+    qDebug()<<_curProgress;
     return _curProgress;
 }
 

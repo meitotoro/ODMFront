@@ -9,13 +9,23 @@
 #include <QUrl>
 #include <QUrlQuery>
 
-SendFiles::SendFiles(QStringList &list, QString &batchName) :
+SendFiles::SendFiles(QNetworkAccessManager* netman,QStringList &list, QString &batchName) :
     _batchName(batchName)
 {
     // 将所有文件加入待发送队列
     for (auto& filename : list) {
         _filesToSend.push_back(filename);
     }
+    QUrlQuery params;
+    params.addQueryItem("folder", _batchName);
+    QUrl url("http://192.168.188.10:9000/delteImage?"+params.query());
+    QNetworkRequest request(url);
+    QNetworkReply* reply = netman->get(request);
+    connect(reply, QNetworkReply::finished, [=]() {
+        QByteArray rep = reply->readAll();
+        qDebug()<<QString::fromUtf8(rep);
+        reply->deleteLater();
+    });
 }
 
 void SendFiles::send(QNetworkAccessManager *netman) {

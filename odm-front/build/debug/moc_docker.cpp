@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Docker_t {
-    QByteArrayData data[4];
-    char stringdata0[30];
+    QByteArrayData data[5];
+    char stringdata0[42];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,10 +34,11 @@ static const qt_meta_stringdata_Docker_t qt_meta_stringdata_Docker = {
 QT_MOC_LITERAL(0, 0, 6), // "Docker"
 QT_MOC_LITERAL(1, 7, 9), // "dockerRun"
 QT_MOC_LITERAL(2, 17, 0), // ""
-QT_MOC_LITERAL(3, 18, 11) // "resultReady"
+QT_MOC_LITERAL(3, 18, 11), // "resultReady"
+QT_MOC_LITERAL(4, 30, 11) // "littleImage"
 
     },
-    "Docker\0dockerRun\0\0resultReady"
+    "Docker\0dockerRun\0\0resultReady\0littleImage"
 };
 #undef QT_MOC_LITERAL
 
@@ -47,18 +48,20 @@ static const uint qt_meta_data_Docker[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    0,   24,    2, 0x06 /* Public */,
-       3,    0,   25,    2, 0x06 /* Public */,
+       1,    0,   29,    2, 0x06 /* Public */,
+       3,    0,   30,    2, 0x06 /* Public */,
+       4,    0,   31,    2, 0x06 /* Public */,
 
  // signals: parameters
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -73,6 +76,7 @@ void Docker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         switch (_id) {
         case 0: _t->dockerRun(); break;
         case 1: _t->resultReady(); break;
+        case 2: _t->littleImage(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -89,6 +93,13 @@ void Docker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
             typedef void (Docker::*_t)();
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&Docker::resultReady)) {
                 *result = 1;
+                return;
+            }
+        }
+        {
+            typedef void (Docker::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&Docker::littleImage)) {
+                *result = 2;
                 return;
             }
         }
@@ -121,13 +132,13 @@ int Docker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
@@ -142,6 +153,12 @@ void Docker::dockerRun()
 void Docker::resultReady()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, Q_NULLPTR);
+}
+
+// SIGNAL 2
+void Docker::littleImage()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, Q_NULLPTR);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

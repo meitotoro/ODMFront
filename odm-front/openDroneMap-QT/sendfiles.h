@@ -12,7 +12,7 @@ class SendFiles : public QObject
 {
     Q_OBJECT
 public:
-    SendFiles(QStringList& list, QString& batchName);
+    SendFiles(QNetworkAccessManager* netman,QStringList& list, QString& batchName);
     void send(QNetworkAccessManager* netman);
 
 private:
